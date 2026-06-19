@@ -1,0 +1,157 @@
+2026-06-19 11:07:29,918 [INFO] cannot load OS/2 table of font 'MFDEV102.TTF'
+2026-06-19 11:19:46,144 [INFO] Task Manager Created
+2026-06-19 11:19:46,145 [INFO] Application Context Initialized
+2026-06-19 11:19:46,145 [INFO] Services Initialized
+2026-06-19 11:19:46,146 [INFO] CAD Engine Initialized
+2026-06-19 11:20:05,154 [INFO] Task Manager Created
+2026-06-19 11:20:05,155 [INFO] Application Context Initialized
+2026-06-19 11:20:05,155 [INFO] Services Initialized
+2026-06-19 11:20:05,155 [INFO] CAD Engine Initialized
+2026-06-19 11:20:48,597 [INFO] Task Manager Created
+2026-06-19 11:20:48,597 [INFO] Application Context Initialized
+2026-06-19 11:20:48,605 [INFO] Services Initialized
+2026-06-19 11:20:48,605 [INFO] CAD Engine Initialized
+2026-06-19 11:21:37,773 [INFO] Task Manager Created
+2026-06-19 11:21:37,774 [INFO] Application Context Initialized
+2026-06-19 11:21:37,774 [INFO] Services Initialized
+2026-06-19 11:21:37,774 [INFO] CAD Engine Initialized
+2026-06-19 11:24:22,380 [INFO] Task Manager Created
+2026-06-19 11:24:22,381 [INFO] Application Context Initialized
+2026-06-19 11:24:22,381 [INFO] Services Initialized
+2026-06-19 11:24:22,381 [INFO] CAD Engine Initialized
+2026-06-19 11:24:38,551 [INFO] Task Manager Created
+2026-06-19 11:24:38,551 [INFO] Application Context Initialized
+2026-06-19 11:24:38,551 [INFO] Services Initialized
+2026-06-19 11:24:38,552 [INFO] CAD Engine Initialized
+2026-06-19 11:28:54,844 [INFO] Task Manager Created
+2026-06-19 11:28:54,845 [INFO] Application Context Initialized
+2026-06-19 11:28:54,845 [INFO] Services Initialized
+2026-06-19 11:28:54,845 [INFO] CAD Engine Initialized
+2026-06-19 11:28:54,845 [INFO] Application Started
+2026-06-19 11:33:40,802 [INFO] Task Manager Created
+2026-06-19 11:33:40,802 [INFO] Application Context Initialized
+2026-06-19 11:33:40,802 [INFO] Services Initialized
+2026-06-19 11:33:40,803 [INFO] CAD Engine Initialized
+2026-06-19 11:33:40,803 [INFO] Application Started
+2026-06-19 11:36:05,170 [INFO] Task Manager Created
+2026-06-19 11:36:05,171 [INFO] Application Context Initialized
+2026-06-19 11:36:05,171 [INFO] Services Initialized
+2026-06-19 11:36:05,171 [INFO] CAD Engine Initialized
+2026-06-19 11:36:05,171 [INFO] Application Started
+2026-06-19 11:36:22,195 [INFO] Task Manager Created
+2026-06-19 11:36:22,196 [INFO] Application Context Initialized
+2026-06-19 11:36:22,196 [INFO] Services Initialized
+2026-06-19 11:36:22,196 [INFO] CAD Engine Initialized
+2026-06-19 11:36:22,196 [INFO] Application Started
+2026-06-19 11:36:36,263 [INFO] Task Manager Created
+2026-06-19 11:36:36,263 [INFO] Application Context Initialized
+2026-06-19 11:36:36,263 [INFO] Services Initialized
+2026-06-19 11:36:36,264 [INFO] CAD Engine Initialized
+2026-06-19 11:36:36,264 [INFO] Application Started
+2026-06-19 11:37:02,861 [INFO] Task Manager Created
+2026-06-19 11:37:02,862 [INFO] Application Context Initialized
+2026-06-19 11:37:02,862 [INFO] Services Initialized
+2026-06-19 11:37:02,862 [INFO] CAD Engine Initialized
+2026-06-19 11:37:02,862 [INFO] Application Started
+2026-06-19 11:37:35,038 [INFO] Task Manager Created
+2026-06-19 11:37:35,038 [INFO] Application Context Initialized
+2026-06-19 11:37:35,038 [INFO] Services Initialized
+2026-06-19 11:37:35,038 [INFO] CAD Engine Initialized
+2026-06-19 11:37:35,038 [INFO] Application Started
+2026-06-19 11:39:34,461 [INFO] Toolbar -> TOOL_SETTINGS
+2026-06-19 11:39:38,239 [INFO] Toolbar -> TOOL_GENERATE
+2026-06-19 11:39:38,239 [INFO] AI Service: Generate request received
+2026-06-19 11:39:38,240 [INFO] No prompt found
+2026-06-19 11:39:40,642 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:40:36,313 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:40:37,367 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:45:29,128 [INFO] Task Manager Created
+2026-06-19 11:45:29,128 [INFO] Application Context Initialized
+2026-06-19 11:45:29,128 [INFO] Services Initialized
+2026-06-19 11:45:29,128 [INFO] CAD Engine Initialized
+2026-06-19 11:45:29,128 [INFO] Application Started
+2026-06-19 11:45:50,481 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:46:40,497 [INFO] Toolbar -> TOOL_GENERATE
+2026-06-19 11:46:40,497 [INFO] AI Service: Generate request received
+2026-06-19 11:46:40,497 [INFO] No prompt found
+2026-06-19 11:47:01,498 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:49:52,240 [INFO] Toolbar -> TOOL_GENERATE
+2026-06-19 11:49:52,240 [INFO] AI Service: Generate request received
+2026-06-19 11:49:52,240 [INFO] No prompt found
+2026-06-19 11:50:02,199 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:50:10,954 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:50:17,252 [INFO] Toolbar -> TOOL_GENERATE
+2026-06-19 11:50:17,252 [INFO] AI Service: Generate request received
+2026-06-19 11:50:17,253 [INFO] No prompt found
+2026-06-19 11:50:55,442 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 11:57:24,923 [INFO] Task Manager Created
+2026-06-19 11:57:24,924 [INFO] Application Context Initialized
+2026-06-19 11:57:24,924 [INFO] Services Initialized
+2026-06-19 11:57:24,924 [INFO] CAD Engine Initialized
+2026-06-19 11:57:24,924 [INFO] Application Started
+2026-06-19 11:57:33,447 [INFO] Design Brain activated
+2026-06-19 11:57:33,447 [INFO] CAD Service building model...
+2026-06-19 11:57:33,449 [INFO] Kernel-based CAD build
+2026-06-19 11:58:15,551 [INFO] Task Manager Created
+2026-06-19 11:58:15,552 [INFO] Application Context Initialized
+2026-06-19 11:58:15,552 [INFO] Services Initialized
+2026-06-19 11:58:15,552 [INFO] CAD Engine Initialized
+2026-06-19 11:58:15,552 [INFO] Application Started
+2026-06-19 11:58:16,892 [INFO] AI Service: Generate request received
+2026-06-19 11:58:16,900 [INFO] Using Design Copilot Brain
+2026-06-19 11:58:16,900 [INFO] Design Brain activated
+2026-06-19 11:58:16,900 [INFO] CAD Service building model...
+2026-06-19 11:58:16,901 [INFO] Kernel-based CAD build
+2026-06-19 11:58:16,910 [WARNING] CAD build unavailable: No module named 'OCP'
+2026-06-19 11:58:18,000 [ERROR] Error generating model: main thread is not in main loop
+2026-06-19 11:59:44,694 [INFO] Task Manager Created
+2026-06-19 11:59:44,694 [INFO] Application Context Initialized
+2026-06-19 11:59:44,694 [INFO] Services Initialized
+2026-06-19 11:59:44,694 [INFO] CAD Engine Initialized
+2026-06-19 11:59:44,694 [INFO] Application Started
+2026-06-19 11:59:54,746 [INFO] Toolbar -> TOOL_NEW
+2026-06-19 12:00:09,677 [INFO] AI Service: Generate request received
+2026-06-19 12:00:09,678 [INFO] Using Design Copilot Brain
+2026-06-19 12:00:09,678 [INFO] Design Brain activated
+2026-06-19 12:00:09,678 [INFO] CAD Service building model...
+2026-06-19 12:00:09,679 [INFO] Kernel-based CAD build
+2026-06-19 12:00:09,692 [WARNING] CAD build unavailable: No module named 'OCP'
+2026-06-19 12:19:11,253 [INFO] Task Manager Created
+2026-06-19 12:19:11,253 [INFO] Application Context Initialized
+2026-06-19 12:19:11,253 [INFO] Services Initialized
+2026-06-19 12:19:11,253 [INFO] CAD Engine Initialized
+2026-06-19 12:19:11,253 [INFO] Application Started
+2026-06-19 12:19:27,545 [INFO] AI Service: Generate request received
+2026-06-19 12:19:27,547 [INFO] Using Design Copilot Brain
+2026-06-19 12:19:27,547 [INFO] Design Brain activated
+2026-06-19 12:19:27,547 [INFO] CAD Service building model...
+2026-06-19 12:19:27,548 [INFO] Kernel-based CAD build
+2026-06-19 12:19:27,563 [WARNING] CAD build unavailable: No module named 'OCP'
+2026-06-19 12:19:42,990 [INFO] AI Service: Generate request received
+2026-06-19 12:19:42,991 [INFO] Using Design Copilot Brain
+2026-06-19 12:19:42,992 [INFO] Design Brain activated
+2026-06-19 12:19:42,992 [INFO] CAD Service building model...
+2026-06-19 12:19:42,993 [INFO] Kernel-based CAD build
+2026-06-19 12:19:43,010 [WARNING] CAD build unavailable: No module named 'OCP'
+2026-06-19 12:20:10,776 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:11,855 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:12,479 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:13,092 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:13,732 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:14,200 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:15,276 [INFO] Toolbar -> TOOL_REDO
+2026-06-19 12:20:15,737 [INFO] Toolbar -> TOOL_REDO
+2026-06-19 12:20:15,908 [INFO] Toolbar -> TOOL_REDO
+2026-06-19 12:20:16,059 [INFO] Toolbar -> TOOL_REDO
+2026-06-19 12:20:16,282 [INFO] Toolbar -> TOOL_REDO
+2026-06-19 12:20:17,622 [INFO] Toolbar -> TOOL_GENERATE
+2026-06-19 12:20:17,623 [INFO] AI Service: Generate request received
+2026-06-19 12:20:17,623 [INFO] Using Design Copilot Brain
+2026-06-19 12:20:17,623 [INFO] Design Brain activated
+2026-06-19 12:20:17,623 [INFO] CAD Service building model...
+2026-06-19 12:20:17,624 [INFO] Kernel-based CAD build
+2026-06-19 12:20:17,633 [WARNING] CAD build unavailable: No module named 'OCP'
+2026-06-19 12:20:21,780 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:22,313 [INFO] Toolbar -> TOOL_UNDO
+2026-06-19 12:20:24,495 [INFO] Toolbar -> TOOL_OPEN
+2026-06-19 12:20:27,381 [INFO] Toolbar -> TOOL_SAVE

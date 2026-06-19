@@ -9,6 +9,7 @@ from ui.chat_panel import ChatPanel
 from ui.parameter_panel import ParameterPanel
 from ui.viewport_panel import ViewportPanel
 from models.design_state import design_state
+from ui.viewport_panel import ViewportPanel
 
 from core.constants import *
 
@@ -21,7 +22,7 @@ class MainWindow:
         self.context = context
         self.event_bus = context.event_bus
 
-        self.root.title(APP_NAME)
+        self.root.title("AI CAD Assistant")
 
         self.root.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
 
@@ -51,7 +52,7 @@ class MainWindow:
         # Main Horizontal Split
         # ==================================================
 
-        self.main = ttk.PanedWindow(
+        self.main = ttk.Panedwindow(
             self.root,
             orient="horizontal"
         )
@@ -75,7 +76,7 @@ class MainWindow:
         # Center Split
         # ==================================================
 
-        self.center = ttk.PanedWindow(
+        self.center = ttk.Panedwindow(
             self.main,
             orient="horizontal"
         )
@@ -94,9 +95,7 @@ class MainWindow:
         # Viewport Frame
         # ==================================================
 
-        self.viewport_frame = ttk.Frame(
-        self.center
-)
+        self.viewport_frame = ttk.Frame(self.center)
 
         # ==================================================
         # Add Frames
@@ -127,7 +126,9 @@ class MainWindow:
         # ==================================================
 
         self.chat_panel = ChatPanel(
-            self.chat_frame
+            self.chat_frame,
+            context=self.context,
+            event_bus=self.event_bus
         )
 
         self.chat_panel.pack(
@@ -147,6 +148,10 @@ class MainWindow:
             fill="both",
             expand=True
         )
+        self.viewport = ViewportPanel(
+    self.viewport_frame,
+    self.context
+)
         ##################################################
 # Viewport
 ##################################################
@@ -233,33 +238,27 @@ class MainWindow:
     def on_model_generated(self, data):
 
         if not data:
-
             return
 
         design_state.set_model(
-
-            data["name"],
-
-            data["parameters"]
-
-    )
+            data.get("name", "Model"),
+            data.get("parameters", {})
+        )
 
         self.parameter_panel.set_model_name(
-
-        design_state.model_name
-
-    )
+            design_state.model_name
+        )
 
         self.parameter_panel.load_parameters(
+            design_state.parameters
+        )
 
-        design_state.parameters
+        self.chat_panel.add_message(
+            "AI",
+            f"Design generated: {data.get('name', 'Model')}\nParameters: {data.get('parameters', {})}"
+        )
 
-    )
-
-        self.status.set(
-
-        "Model Generated"
-    )
+        self.status.set("Model Generated")
     def show(self):
         self.root.mainloop()
     ##########################################################

@@ -20,10 +20,7 @@ from core.settings import settings
 from models.design_state import design_state
 from core.task_manager import TaskManager
 from core.command import CommandManager
-from core.services.ai_service import AIService
-from core.services.cad_service import CADService
-from core.services.project_service import ProjectService
-
+from core.copilot.design_brain import DesignBrain
 
 class ApplicationContext:
     """
@@ -45,6 +42,7 @@ class ApplicationContext:
         self.settings = settings
 
         self.design_state = design_state
+        self.design_brain = DesignBrain(self)
 
         # -------------------------------------------------
         # Runtime Services
@@ -75,6 +73,16 @@ class ApplicationContext:
         """
         Called once when the application starts.
         """
+        # Lazy imports to avoid circular dependencies and cadquery issues
+        from core.services.ai_service import AIService
+        from core.services.cad_service import CADService
+        from core.services.project_service import ProjectService
+        from core.cad.cad_builder import CADBuilder
+        from core.cad.export_service import ExportService
+        from core.selection.selection_manager import SelectionManager
+        from core.parametric.regenerator import ParametricRegenerator
+        from core.cad_kernel.parametric_kernel import ParametricKernel
+        from core.storage.project_store import ProjectStore
 
         self.running = True
 
@@ -89,6 +97,14 @@ class ApplicationContext:
         self.project_service = ProjectService(self)
 
         self.logger.info("Services Initialized")
+        self.cad_builder = CADBuilder(self)
+        self.export_service = ExportService(self)
+
+        self.logger.info("CAD Engine Initialized")
+        self.selection_manager = SelectionManager(self)
+        self.parametric = ParametricRegenerator(self)
+        self.parametric_kernel = ParametricKernel(self)
+        self.project_store = ProjectStore(self)
 
     ########################################################
 

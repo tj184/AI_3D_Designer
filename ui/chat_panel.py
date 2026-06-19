@@ -4,10 +4,12 @@ from tkinter import scrolledtext
 
 class ChatPanel(ttk.Frame):
 
-    def __init__(self, master):
+    def __init__(self, master, context=None, event_bus=None):
 
         super().__init__(master, padding=8)
 
+        self.context = context
+        self.event_bus = event_bus
         self.create_widgets()
 
     #######################################################
@@ -27,7 +29,8 @@ class ChatPanel(ttk.Frame):
 
         ttk.Button(
             header,
-            text="Clear"
+            text="Clear",
+            command=self.clear_chat
         ).pack(side="right")
 
         # ---------------- Conversation ---------------- #
@@ -88,7 +91,8 @@ class ChatPanel(ttk.Frame):
 
             button_frame,
 
-            text="Generate"
+            text="Generate",
+            command=self.on_generate
 
         ).pack(
 
@@ -102,7 +106,8 @@ class ChatPanel(ttk.Frame):
 
             button_frame,
 
-            text="Stop"
+            text="Stop",
+            command=self.on_stop
 
         ).pack(
 
@@ -116,7 +121,8 @@ class ChatPanel(ttk.Frame):
 
             button_frame,
 
-            text="Regenerate"
+            text="Regenerate",
+            command=self.on_regenerate
 
         ).pack(
 
@@ -125,6 +131,54 @@ class ChatPanel(ttk.Frame):
             padx=2
 
         )
+
+    #######################################################
+
+    def on_generate(self):
+        """Handle generate button click"""
+        prompt_text = self.prompt.get("1.0", "end").strip()
+        
+        if not prompt_text:
+            self.add_message("System", "Please enter a design description")
+            return
+        
+        self.add_message("You", prompt_text)
+        self.add_message("AI", "Generating design...")
+        
+        # Store prompt in design state
+        if self.context:
+            self.context.design_state.last_prompt = prompt_text
+        
+        # Publish generate event
+        if self.event_bus:
+            from core.constants import TOOL_GENERATE
+            self.event_bus.publish(TOOL_GENERATE)
+        
+        # Clear prompt input
+        self.prompt.delete("1.0", "end")
+
+    #######################################################
+
+    def on_stop(self):
+        """Handle stop button click"""
+        self.add_message("System", "Generation stopped")
+
+    #######################################################
+
+    def on_regenerate(self):
+        """Handle regenerate button click"""
+        if self.context and self.context.design_state.last_prompt:
+            self.on_generate()
+        else:
+            self.add_message("System", "No previous prompt to regenerate")
+
+    #######################################################
+
+    def clear_chat(self):
+        """Clear chat history"""
+        self.chat_history.configure(state="normal")
+        self.chat_history.delete("1.0", "end")
+        self.chat_history.configure(state="disabled")
 
     #######################################################
 

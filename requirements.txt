@@ -1,0 +1,8 @@
+cadquery
+vtk
+ttkbootstrap
+requests
+numpy
+pillow
+pyyaml
+pyinstaller

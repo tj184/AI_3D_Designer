@@ -71,6 +71,19 @@ class DesignState:
         self.parameters = parameters
 
         self.modified = True
+    def update_parameter(self, name, value):
+
+        self.parameters[name] = value
+
+        from core.context import context
+
+        context.event_bus.publish(
+        "PARAMETER_CHANGED",
+        {
+            "name": name,
+            "value": value
+        }
+    )
 
 
 design_state = DesignState()

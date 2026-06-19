@@ -1,53 +1,36 @@
+import ttkbootstrap as ttk
+
 from core.theme import create_window
-from core.context import context
-from core.app import AI3DApplication
+from core.context import ApplicationContext
+
+from ui.main_window import MainWindow
 
 
 def main():
 
-    # ---------------------------------------------
-    # Initialize application services
-    # ---------------------------------------------
-
-    context.initialize()
-
-    # ---------------------------------------------
-    # Create main window
-    # ---------------------------------------------
-
+    # -----------------------------
+    # Create Root Window
+    # -----------------------------
     root = create_window()
 
-    # ---------------------------------------------
-    # Create application
-    # ---------------------------------------------
+    # -----------------------------
+    # Initialize Global Context
+    # -----------------------------
+    context = ApplicationContext()
 
-    app = AI3DApplication(
-        root=root,
-        context=context
-    )
+    # attach context globally
+    context.initialize()
 
-    # ---------------------------------------------
-    # Graceful shutdown
-    # ---------------------------------------------
+    # -----------------------------
+    # Create UI
+    # -----------------------------
+    app = MainWindow(root, context)
 
-    def on_close():
-
-        app.shutdown()
-
-        root.destroy()
-
-    root.protocol(
-        "WM_DELETE_WINDOW",
-        on_close
-    )
-
-    # ---------------------------------------------
-    # Start UI
-    # ---------------------------------------------
-
-    app.run()
+    # -----------------------------
+    # Start App
+    # -----------------------------
+    app.show()
 
 
 if __name__ == "__main__":
-
     main()

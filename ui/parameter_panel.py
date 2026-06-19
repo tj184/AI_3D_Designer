@@ -239,6 +239,55 @@ class ParameterPanel(ttk.Frame):
         data = {}
 
         for key, var in self.variables.items():
+
             data[key] = var.get()
 
         return data
+    def bind_selection(self, context):
+
+        self.context = context
+
+        self.event_bus = context.event_bus
+
+        self.event_bus.subscribe(
+        "SELECTION_CHANGED",
+        self.on_selection_changed
+    )
+
+
+    def on_selection_changed(self, data):
+
+        if not data:
+            return
+
+    # Example auto-load
+        params = self.context.design_state.parameters
+
+        self.load_parameters(params)
+    def bind_live_updates(self):
+
+        for name, entry in self.entries.items():
+
+            entry.bind(
+            "<KeyRelease>",
+            lambda e, n=name: self.on_change(n)
+        )
+
+
+    def on_change(self, name):
+
+        value = self.variables[name].get()
+
+        self.context.design_state.update_parameter(name, value)
+    def live_update(self, name, value):
+
+        self.context.design_state.update_parameter(name, value)
+
+        self.context.event_bus.publish(
+        "PARAMETER_CHANGED",
+        {
+            "name": name,
+            "value": value,
+            "live": True
+        }
+    )

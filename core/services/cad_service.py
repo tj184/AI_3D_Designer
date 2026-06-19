@@ -1,5 +1,5 @@
 from core.constants import *
-from core.context import context
+from core.cad.geometry_validator import GeometryValidator
 
 
 class CADService:
@@ -18,10 +18,10 @@ class CADService:
 
     def on_model_generated(self, data):
 
-        self.context.logger.info("CAD Service received model")
+        self.context.logger.info("CAD Service building model...")
 
         self.context.task_manager.submit(
-            "CAD Generation",
+            "CAD Build",
             self.build_model,
             data
         )
@@ -30,24 +30,33 @@ class CADService:
 
     def build_model(self, data):
 
-        # ------------------------------
-        # Placeholder CAD execution
-        # ------------------------------
+        model = self.context.cad_builder.build(data)
 
-        self.context.logger.info("Building CAD model...")
+        if not GeometryValidator.validate(model):
 
-        import time
-        time.sleep(2)
+            self.context.logger.error("Invalid geometry")
 
-        self.context.design_state.stl_file = "output/model.stl"
-        self.context.design_state.step_file = "output/model.step"
+            self.event_bus.publish(
+                STATUS_CHANGED,
+                "Invalid Model Geometry"
+            )
+
+            return None
+
+        # Export (temporary auto-export)
+        stl = self.context.export_service.export_stl(model)
+
+        step = self.context.export_service.export_step(model)
+
+        self.context.design_state.stl_file = stl
+        self.context.design_state.step_file = step
 
         self.event_bus.publish(
             STATUS_CHANGED,
-            "CAD Model Generated"
+            "CAD Model Generated Successfully"
         )
 
         return {
-            "stl": self.context.design_state.stl_file,
-            "step": self.context.design_state.step_file
+            "stl": stl,
+            "step": step
         }
