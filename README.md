@@ -1,4 +1,4 @@
-﻿
+﻿# AI_3D_Designer
 
 
 # AI_3D_Designer is a desktop application that uses Large Language Models (LLMs) to generate, edit, and visualize parametric 3D CAD models from natural language prompts. It combines AI-powered design generation with a real-time 3D viewport, allowing users to create models suitable for 3D printing without writing CAD scripts manually.
